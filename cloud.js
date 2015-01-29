@@ -5,7 +5,8 @@ module.exports = {
    * @param  {String} phrase
    * @return {Number} the number of times "cloud" shows up in `phrase`
    */
-  findCloud: function(phrase) {
+  findCloud: function(phrase) {        
+    return phrase.match(/cloud\b/g).length;
   },
 
   /**
@@ -16,6 +17,7 @@ module.exports = {
    * @return {String} The new phrase.
    */
   replaceCloud: function(phrase, newWord) {
+    phrase.replace(/cloud\b/g,newWord);
   },
 
   /**
